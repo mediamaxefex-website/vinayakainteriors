@@ -1,59 +1,54 @@
-/* ===== GALLERY SECTION ===== */
+/* ===== GALLERY ===== */
 .gallery {
-  padding: 60px 20px;
+  padding: 50px 15px;
   background: #000;
 }
 
 .gallery h2 {
   text-align: center;
   color: #d4af37;
-  margin-bottom: 40px;
-  font-size: 28px;
+  margin-bottom: 30px;
+  font-size: 26px;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
   max-width: 1200px;
   margin: auto;
 }
 
-/* IMAGE CARD */
-.grid img {
+/* FIXED IMAGE BOX */
+.item {
+  position: relative;
   width: 100%;
-  height: 220px;              /* 🔑 controls size */
-  object-fit: cover;          /* 🔑 prevents stretch */
-  border: 2px solid #d4af37;
-  border-radius: 10px;
+  padding-top: 70%;        /* FIXED HEIGHT */
   background: #111;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* HOVER (DESKTOP ONLY) */
-.grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+/* IMAGE LOCK */
+.item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ===== MOBILE FIX ===== */
+/* MOBILE */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid img {
-    height: 160px;           /* 🔑 smaller for mobile */
   }
 }
 
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .grid img {
-    height: 200px;
   }
 }
