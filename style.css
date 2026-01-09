@@ -1,152 +1,59 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #000;
-  color: #d4af37;
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.85)
-  ),
-  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 120px 20px 40px;
-}
-
-.logo {
-  max-width: 420px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  letter-spacing: 2px;
-}
-
-/* ABOUT */
-.about {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about p {
-  max-width: 900px;
-  margin: auto;
-  color: #eee;
-  line-height: 1.8;
-}
-
-/* GALLERY */
+/* ===== GALLERY SECTION ===== */
 .gallery {
-  padding: 80px 20px;
+  padding: 60px 20px;
+  background: #000;
 }
 
 .gallery h2 {
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
+  color: #d4af37;
   margin-bottom: 40px;
+  font-size: 28px;
 }
 
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* IMAGE CARD */
 .grid img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: 220px;              /* 🔑 controls size */
+  object-fit: cover;          /* 🔑 prevents stretch */
   border: 2px solid #d4af37;
-  background: #000;
+  border-radius: 10px;
+  background: #111;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (hover: hover) {
-  .grid img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 18px rgba(212,175,55,0.6);
+/* HOVER (DESKTOP ONLY) */
+.grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid img {
+    height: 160px;           /* 🔑 smaller for mobile */
   }
 }
 
-/* CONTACT */
-.contact {
-  padding: 80px 20px;
-  text-align: center;
-  background: #111;
-}
-
-.contact h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.contact p {
-  color: #eee;
-  margin-bottom: 18px;
-}
-
-.contact a {
-  color: #d4af37;
-  text-decoration: none;
-}
-
-.social a {
-  display: inline-block;
-  margin: 10px 12px;
-  padding: 10px 22px;
-  border: 1px solid #d4af37;
-  transition: 0.3s;
-}
-
-.social a:hover {
-  background: #d4af37;
-  color: #000;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  color: #888;
-  font-size: 14px;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 24px;
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  .logo {
-    max-width: 280px;
-  }
-
-  .about h2,
-  .gallery h2,
-  .contact h2 {
-    font-size: 28px;
+  .grid img {
+    height: 200px;
   }
 }
