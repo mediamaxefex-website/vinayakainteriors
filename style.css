@@ -1,30 +1,86 @@
-/* Existing Button Styles remain the same */
-.luxury-btn {
+/* Reset and Mobile Fix */
+* { box-sizing: border-box; }
+body {
+    background-color: #000; /* Rich Luxury Black */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    max-width: 400px;
+    overflow-x: hidden; /* Prevents horizontal scrolling on mobile */
+}
+
+/* Header & Logo */
+.main-header {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.big-logo {
+    width: 320px;      /* Large size for PC */
+    max-width: 90%;    /* Scales down perfectly for mobile */
+    height: auto;
+}
+
+/* Featured 4-Image Grid */
+.mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mini-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+/* Luxury Buttons */
+.action-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.btn {
+    width: 100%;
+    max-width: 350px;
     background: #1a1a1a;
     color: white;
     text-decoration: none;
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    font-weight: bold;
-    border-left: 5px solid transparent;
+    border-left: 6px solid #333;
 }
 
-/* Individual Border Colors */
-.loc { border-left-color: #00d2ff; } /* Location Cyan */
+.btn i { font-size: 1.4rem; margin-right: 15px; }
+
+/* Colors for the side borders */
+.loc { border-left-color: #00d2ff; }
 .wa { border-left-color: #25d366; }
 .call { border-left-color: #f1c40f; }
 .ig { border-left-color: #e1306c; }
 .fb { border-left-color: #1877f2; }
-.yt { border-left-color: #ff0000; }
 .mail { border-left-color: #777; }
-.gallery-link { border-left-color: #d4af37; background: #222; }
 
-/* Footer styling */
-footer { padding: 40px; font-size: 0.85rem; color: #666; background: #000; }
-footer strong { color: #d4af37; }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.8rem;
+    color: #444;
+}
+footer strong { color: #f1c40f; }
