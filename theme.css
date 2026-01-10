@@ -1,0 +1,36 @@
+/* Black, Gold, and White Theme */
+body {
+    background-color: #000000; /* Black */
+    color: #ffffff; /* White text */
+    font-family: sans-serif;
+}
+
+.branding-banner {
+    padding: 30px 10px;
+    border-bottom: 2px solid #d4af37; /* Gold line */
+}
+
+.branding-banner h1 {
+    color: #d4af37; /* Gold text */
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.branding-banner p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Button Colors */
+.btn {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #d4af37; /* Gold border */
+}
+
+.btn i { color: #d4af37; } /* Gold icons */
+
+footer strong {
+    color: #d4af37; /* Gold for MAX EFEX */
+}
