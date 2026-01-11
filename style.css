@@ -1,47 +1,57 @@
-/* Layout & Structure */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { 
-    text-align: center; 
-    padding-bottom: 50px; 
+/* Palette: Dark Grey #1F1F1F | Cream Golden #F5E6BE */
+* { box-sizing: border-box; }
+body {
+    background-color: #1f1f1f; /* Luxury Dark Grey Background */
+    color: #f5e6be; /* Cream Golden Text */
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.main-header { padding: 20px; }
-.big-logo { width: 80%; max-width: 300px; }
+/* Elegant Header Section */
+.luxury-header { padding: 60px 10px; }
+.elegant-logo { width: 340px; max-width: 90%; height: auto; margin-bottom: 25px; }
 
-/* Grid for 4 images */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 15px;
-}
+.branding-container { margin-top: 10px; }
+.experience-text { font-size: 1.1rem; letter-spacing: 4px; font-weight: bold; }
+.divider { height: 1px; width: 80px; background: #f5e6be; margin: 15px auto; }
+.values-text { font-size: 0.75rem; letter-spacing: 2px; opacity: 0.9; }
 
-.image-grid img {
+/* Vertical Image Stack */
+.vertical-gallery { padding: 0 15px; }
+.vertical-gallery img {
     width: 100%;
-    border-radius: 8px;
+    max-width: 550px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #333;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Button Layout */
-.action-area {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px;
+/* Outlined Buttons Styling */
+.action-stack { padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+.luxury-btn {
+    width: 100%;
     max-width: 400px;
-    margin: 0 auto;
-}
-
-.btn {
+    background: transparent;
+    color: #f5e6be;
     text-decoration: none;
-    padding: 15px;
-    border-radius: 30px;
+    padding: 18px;
+    margin-bottom: 15px;
+    border: 1px solid #f5e6be; /* Cream Golden Thin Border */
+    border-radius: 4px;
     font-weight: bold;
+    letter-spacing: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
-footer { padding: 30px; font-size: 14px; }
+.luxury-btn i { margin-right: 15px; font-size: 1.2rem; }
+
+/* Footer */
+.luxury-footer { padding: 60px 20px; font-size: 0.75rem; color: #888; letter-spacing: 1px; }
+.luxury-footer strong { color: #f5e6be; }
