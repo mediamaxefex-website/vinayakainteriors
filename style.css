@@ -1,57 +1,69 @@
-/* Palette: Dark Grey #1F1F1F | Cream Golden #F5E6BE */
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    background-color: #1f1f1f; /* Luxury Dark Grey Background */
-    color: #f5e6be; /* Cream Golden Text */
-    font-family: 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 480px; /* Maintains professional mobile-app feel on PC */
     text-align: center;
 }
 
-/* Elegant Header Section */
-.luxury-header { padding: 60px 10px; }
-.elegant-logo { width: 340px; max-width: 90%; height: auto; margin-bottom: 25px; }
-
-.branding-container { margin-top: 10px; }
-.experience-text { font-size: 1.1rem; letter-spacing: 4px; font-weight: bold; }
-.divider { height: 1px; width: 80px; background: #f5e6be; margin: 15px auto; }
-.values-text { font-size: 0.75rem; letter-spacing: 2px; opacity: 0.9; }
-
-/* Vertical Image Stack */
-.vertical-gallery { padding: 0 15px; }
-.vertical-gallery img {
-    width: 100%;
-    max-width: 550px;
+/* BIGGER LOGO STYLING */
+.elegant-logo {
+    width: 90%; /* Increased from 60% */
+    max-width: 350px; /* Increased from 200px */
     height: auto;
-    margin-bottom: 20px;
-    border: 1px solid #333;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
 }
 
-/* Outlined Buttons Styling */
-.action-stack { padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-.luxury-btn {
-    width: 100%;
-    max-width: 400px;
-    background: transparent;
-    color: #f5e6be;
-    text-decoration: none;
-    padding: 18px;
-    margin-bottom: 15px;
-    border: 1px solid #f5e6be; /* Cream Golden Thin Border */
-    border-radius: 4px;
+.header-details p {
+    color: #d4af37;
     font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+/* ABOUT SECTION */
+.about-section { padding: 30px 20px; background: #222; }
+.about-section h2 { color: #d4af37; margin-bottom: 10px; font-size: 22px; }
+.about-section p { font-size: 14px; color: #ccc; line-height: 1.6; }
+
+/* 8 IMAGES GALLERY */
+.vertical-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 8px; /* Small gap between images */
+    border-bottom: 2px solid #333;
+}
+
+/* BUTTONS - NO BLUE LINKS */
+.luxury-btn, .social-item, .review-btn, .header-loc-btn {
+    text-decoration: none !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    width: 85%;
+    margin: 12px auto;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
 }
 
-.luxury-btn i { margin-right: 15px; font-size: 1.2rem; }
+.call-btn { background-color: #b8860b; color: #fff !important; }
+.whatsapp-btn { background-color: #25d366; color: #fff !important; }
+.email-btn { background-color: #444; border: 1px solid #d4af37; color: #fff !important; }
+.header-loc-btn { background: #d4af37; color: #000 !important; width: auto; padding: 10px 20px; }
 
-/* Footer */
-.luxury-footer { padding: 60px 20px; font-size: 0.75rem; color: #888; letter-spacing: 1px; }
-.luxury-footer strong { color: #f5e6be; }
+.social-links-row { display: flex; justify-content: center; gap: 10px; padding: 0 20px; }
+.social-item { width: 48%; background: #333; color: #d4af37 !important; border: 1px solid #d4af37; }
+
+.review-btn { background-color: #4285F4; color: #fff !important; }
+
+h3 { color: #d4af37; margin: 30px 0 15px; letter-spacing: 1px; }
+
+.luxury-footer { padding: 40px 10px; font-size: 12px; color: #777; }
