@@ -1,3 +1,4 @@
+/* --- GLOBAL RESET & MOBILE-FIRST CONTAINER --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -5,42 +6,62 @@ body {
     color: #ffffff;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0 auto;
-    max-width: 480px; /* Maintains professional mobile-app feel on PC */
+    max-width: 480px; /* Limits size on PC to look professional */
     text-align: center;
+    overflow-x: hidden;
 }
 
-/* BIGGER LOGO STYLING */
+/* --- FIX: PREVENT BLUE LINKS ON MOBILE --- */
+a, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* --- HEADER & LOGO --- */
 .elegant-logo {
-    width: 90%; /* Increased from 60% */
-    max-width: 350px; /* Increased from 200px */
+    width: 90%;
+    max-width: 350px;
     height: auto;
-    margin: 20px auto;
+    margin: 20px auto 10px;
 }
 
 .header-details p {
     color: #d4af37;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     margin: 4px 0;
 }
 
-/* ABOUT SECTION */
+.header-loc-btn {
+    display: inline-block;
+    background: #d4af37 !important;
+    color: #000000 !important;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.branding-container { padding: 20px 10px; }
+.divider { height: 1px; background: #d4af37; width: 60%; margin: 10px auto; }
+
+/* --- ABOUT SECTION --- */
 .about-section { padding: 30px 20px; background: #222; }
 .about-section h2 { color: #d4af37; margin-bottom: 10px; font-size: 22px; }
 .about-section p { font-size: 14px; color: #ccc; line-height: 1.6; }
 
-/* 8 IMAGES GALLERY */
+/* --- GALLERY --- */
 .vertical-gallery img {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 8px; /* Small gap between images */
-    border-bottom: 2px solid #333;
+    margin-bottom: 5px;
 }
 
-/* BUTTONS - NO BLUE LINKS */
-.luxury-btn, .social-item, .review-btn, .header-loc-btn {
-    text-decoration: none !important;
+/* --- BUTTON STYLING (NO BLUE COLORS) --- */
+.luxury-btn, .review-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,16 +75,40 @@ body {
     text-transform: uppercase;
 }
 
-.call-btn { background-color: #b8860b; color: #fff !important; }
-.whatsapp-btn { background-color: #25d366; color: #fff !important; }
-.email-btn { background-color: #444; border: 1px solid #d4af37; color: #fff !important; }
-.header-loc-btn { background: #d4af37; color: #000 !important; width: auto; padding: 10px 20px; }
+.call-btn { background-color: #b8860b !important; color: #fff !important; }
+.whatsapp-btn { background-color: #25d366 !important; color: #fff !important; }
+.email-btn { background-color: #444 !important; border: 1px solid #d4af37; color: #fff !important; }
 
-.social-links-row { display: flex; justify-content: center; gap: 10px; padding: 0 20px; }
-.social-item { width: 48%; background: #333; color: #d4af37 !important; border: 1px solid #d4af37; }
+/* SOCIAL SECTION */
+.social-links-row { display: flex; justify-content: center; gap: 10px; padding: 0 15px; }
+.social-item {
+    width: 48%;
+    background: #333 !important;
+    color: #d4af37 !important;
+    border: 1px solid #d4af37;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+}
 
-.review-btn { background-color: #4285F4; color: #fff !important; }
+/* --- MAP & ALIGNMENT --- */
+.map-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+}
 
-h3 { color: #d4af37; margin: 30px 0 15px; letter-spacing: 1px; }
+.map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    margin-bottom: 15px;
+}
 
-.luxury-footer { padding: 40px 10px; font-size: 12px; color: #777; }
+.review-btn { background-color: #4285F4 !important; color: #fff !important; }
+
+h3 { color: #d4af37; margin: 30px 0 15px; }
+.luxury-footer { padding: 40px 10px; font-size: 11px; color: #777; }
