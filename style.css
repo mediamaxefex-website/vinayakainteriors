@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- FIX: PREVENT BLUE LINKS ON MOBILE --- */
+/* --- PREVENT BLUE LINKS --- */
 a, a:visited, a:hover, a:active {
     text-decoration: none !important;
     color: inherit;
@@ -46,13 +46,15 @@ a, a:visited, a:hover, a:active {
 
 .branding-container { padding: 20px 10px; }
 .divider { height: 1px; background: #d4af37; width: 60%; margin: 10px auto; }
+.experience-text { font-weight: bold; color: #d4af37; letter-spacing: 1px; }
+.values-text { font-size: 10px; color: #888; letter-spacing: 2px; }
 
 /* --- ABOUT SECTION --- */
 .about-section { padding: 30px 20px; background: #222; }
 .about-section h2 { color: #d4af37; margin-bottom: 10px; font-size: 22px; }
 .about-section p { font-size: 14px; color: #ccc; line-height: 1.6; }
 
-/* --- GALLERY --- */
+/* --- VERTICAL PROJECT GALLERY --- */
 .vertical-gallery img {
     width: 100%;
     height: auto;
@@ -60,7 +62,21 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 5px;
 }
 
-/* --- BUTTON STYLING (NO BLUE COLORS) --- */
+/* --- STUDIO GALLERY (NOW VERTICAL) --- */
+.studio-gallery {
+    padding: 30px 0 10px; /* Removed horizontal padding for full-width look */
+    background: #1e1e1e;
+}
+
+.studio-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 5px; /* Matches .vertical-gallery spacing */
+    border-bottom: 1px solid #d4af37; /* Optional: adds a thin gold line between studio photos */
+}
+
+/* --- BUTTON STYLING --- */
 .luxury-btn, .review-btn {
     display: flex;
     align-items: center;
@@ -78,8 +94,9 @@ a, a:visited, a:hover, a:active {
 .call-btn { background-color: #b8860b !important; color: #fff !important; }
 .whatsapp-btn { background-color: #25d366 !important; color: #fff !important; }
 .email-btn { background-color: #444 !important; border: 1px solid #d4af37; color: #fff !important; }
+.review-btn { background-color: #4285F4 !important; color: #fff !important; }
 
-/* SOCIAL SECTION */
+/* --- SOCIAL SECTION --- */
 .social-links-row { display: flex; justify-content: center; gap: 10px; padding: 0 15px; }
 .social-item {
     width: 48%;
@@ -92,14 +109,8 @@ a, a:visited, a:hover, a:active {
     font-size: 12px;
 }
 
-/* --- MAP & ALIGNMENT --- */
-.map-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 10px;
-}
-
+/* --- MAP & FOOTER --- */
+.map-section { padding: 30px 10px; }
 .map-container {
     width: 100%;
     border-radius: 12px;
@@ -108,7 +119,5 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 15px;
 }
 
-.review-btn { background-color: #4285F4 !important; color: #fff !important; }
-
-h3 { color: #d4af37; margin: 30px 0 15px; }
+h3 { color: #d4af37; margin: 30px 0 15px; text-transform: uppercase; letter-spacing: 1px; }
 .luxury-footer { padding: 40px 10px; font-size: 11px; color: #777; }
