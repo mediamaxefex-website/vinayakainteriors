@@ -1,206 +1,57 @@
-/* --- GLOBAL RESET & MOBILE-FIRST CONTAINER --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* --- GLOBAL RESET & NO OVERFLOW --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0 auto;
-    max-width: 480px;
-    /* Limits size on PC to look professional */
+    max-width: 480px; /* Forces mobile view on desktop */
     text-align: center;
     overflow-x: hidden;
 }
 
-/* --- PREVENT BLUE LINKS --- */
-a,
-a:visited,
-a:hover,
-a:active {
-    text-decoration: none !important;
-    color: inherit;
-    -webkit-tap-highlight-color: transparent;
-}
+/* FIX: Ensure images never get too big */
+img { max-width: 100%; height: auto; display: block; }
 
-/* --- HEADER & LOGO --- */
-.elegant-logo {
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-    margin: 20px auto 10px;
-}
-
-.header-details p {
-    color: #d4af37;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 4px 0;
-}
-
+/* --- HEADER --- */
+.elegant-logo { width: 90%; margin: 20px auto 10px; }
+.header-details p { color: #d4af37; font-weight: bold; font-size: 14px; margin: 4px 0; }
 .header-loc-btn {
     display: inline-block;
-    background: #d4af37 !important;
-    color: #000000 !important;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.branding-container {
-    padding: 20px 10px;
-}
-
-.divider {
-    height: 1px;
     background: #d4af37;
-    width: 60%;
-    margin: 10px auto;
-}
-
-.experience-text {
+    color: #000;
+    padding: 12px 20px;
     font-weight: bold;
-    color: #d4af37;
-    letter-spacing: 1px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 10px;
 }
+.divider { height: 1px; background: #d4af37; width: 60%; margin: 15px auto; }
 
-.values-text {
-    font-size: 10px;
-    color: #888;
-    letter-spacing: 2px;
-}
-
-/* --- ABOUT SECTION --- */
-.about-section {
-    padding: 30px 20px;
-    background: #222;
-}
-
-.about-section h2 {
-    color: #d4af37;
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-.about-section p {
-    font-size: 14px;
-    color: #ccc;
-    line-height: 1.6;
-}
-
-/* --- VERTICAL PROJECT GALLERY --- */
-.vertical-gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* --- STUDIO GALLERY (NOW VERTICAL) --- */
-.studio-gallery {
-    padding: 30px 0 10px;
-    /* Removed horizontal padding for full-width look */
-    background: #1e1e1e;
-}
-
-.studio-gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
-    /* Matches .vertical-gallery spacing */
-    border-bottom: 1px solid #d4af37;
-    /* Optional: adds a thin gold line between studio photos */
-}
-
-/* --- BUTTON STYLING --- */
-.luxury-btn,
-.review-btn {
+/* --- BUTTON STYLING (THE REFIX) --- */
+.luxury-btn, .review-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 85%;
-    margin: 12px auto;
-    padding: 15px;
+    gap: 12px;
+    width: 90%;
+    margin: 15px auto;
+    padding: 18px;
     font-size: 14px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-transform: uppercase;
-}
-
-.call-btn {
-    background-color: #b8860b !important;
-    color: #fff !important;
-}
-
-.whatsapp-btn {
-    background-color: #25d366 !important;
-    color: #fff !important;
-}
-
-.email-btn {
-    background-color: #444 !important;
-    border: 1px solid #d4af37;
-    color: #fff !important;
-}
-
-.review-btn {
-    background-color: #4285F4 !important;
-    color: #fff !important;
-}
-
-/* --- SOCIAL SECTION --- */
-.social-links-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 15px;
-}
-
-.social-item {
-    width: 48%;
-    background: #333 !important;
-    color: #d4af37 !important;
-    border: 1px solid #d4af37;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-/* --- MAP & FOOTER --- */
-.map-section {
-    padding: 30px 10px;
-}
-
-.map-container {
-    width: 100%;
+    font-weight: 800;
     border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #333;
-    margin-bottom: 15px;
-}
-
-h3 {
-    color: #d4af37;
-    margin: 30px 0 15px;
+    text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    border: none;
 }
 
-.luxury-footer {
-    padding: 40px 10px;
-    font-size: 11px;
-    color: #777;
-}
+.call-btn { background: #b8860b; color: #fff; }
+.whatsapp-btn { background: #25d366; color: #fff; }
+.review-btn { background: #4285F4; color: #fff; margin-top: 20px; }
 
-/* --- ANNIVERSARY OFFER SECTION --- */
+/* --- OFFER SECTION --- */
 .offer-section {
     background: #222;
     padding: 40px 20px;
@@ -208,75 +59,51 @@ h3 {
     margin: 20px 10px;
     border-radius: 15px;
 }
+.anniversary-badge { background: #d4af37; color: #000; padding: 8px 15px; border-radius: 5px; font-weight: 900; }
+.offer-details ul { list-style: none; text-align: left; margin: 20px 0; padding-left: 10px; }
+.offer-details li { margin: 10px 0; font-size: 14px; }
+.offer-details i { color: #d4af37; margin-right: 10px; }
+.price-value { font-size: 32px; font-weight: 900; color: #d4af37; display: block; margin: 15px 0; }
 
-.anniversary-badge {
-    background: #d4af37;
-    color: #000;
-    font-weight: 900;
-    padding: 8px 15px;
-    display: inline-block;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 14px;
+.models-btn { background: transparent; color: #d4af37; border: 1px solid #d4af37; padding: 12px; width: 90%; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.offer-gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 15px; }
+
+/* --- MAP & FOOTER --- */
+.map-container { width: 95%; margin: 15px auto; border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+h3 { color: #d4af37; margin: 30px 0 15px; text-transform: uppercase; letter-spacing: 1px; }
+.luxury-footer { padding: 40px 10px; font-size: 11px; color: #777; }
+/* --- SOCIAL SECTION BUTTONS --- */
+.social-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 15px;
+    margin-top: 10px;
 }
 
-.package-subtitle {
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.offer-details ul {
-    list-style: none;
-    text-align: left;
-    margin: 20px 0;
-}
-
-.offer-details li {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #ccc;
-}
-
-.offer-details i {
-    color: #d4af37;
-    margin-right: 10px;
-}
-
-.price-value {
-    display: block;
-    font-size: 32px;
-    font-weight: 900;
-    color: #d4af37;
-    margin: 15px 0;
-}
-
-.models-btn {
-    background: transparent;
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    padding: 12px;
-    width: 100%;
-    font-weight: bold;
-    cursor: pointer;
+.social-item {
+    flex: 1; /* Makes both buttons equal width */
+    max-width: 180px;
+    background: #222 !important; /* Dark background */
+    color: #d4af37 !important; /* Gold text */
+    border: 1px solid #d4af37; /* Gold border */
+    padding: 15px 10px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none !important; /* Removes the underline/purple color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s;
 }
 
-.offer-gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 25px;
+.social-item:hover {
+    background: #d4af37 !important;
+    color: #000 !important; /* Inverts colors on hover */
 }
 
-.offer-gallery-grid img {
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #333;
-}
-
-.get-offer-btn {
-    background-color: #d4af37 !important;
-    color: #000 !important;
+.social-item i {
+    font-size: 16px;
 }
